@@ -55,6 +55,7 @@ export class LibroService {
   }
 
   async delete(id: string): Promise<void> {
-    await this.libroRepository.delete(id);
+    const libro = await this.findOne(id);
+    await this.libroRepository.remove(libro);
   }
 }

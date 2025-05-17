@@ -72,8 +72,8 @@ export class BibliotecaService {
   }
 
   private isValidTimeRange(horaApertura: string, horaCierre: string): boolean {
-    const apertura = moment(horaApertura, 'HH:mm', true);
-    const cierre = moment(horaCierre, 'HH:mm', true);
+    const apertura = moment(horaApertura, 'HH:mm:ss', true);
+    const cierre = moment(horaCierre, 'HH:mm:ss', true);
     return apertura.isValid() && cierre.isValid() && apertura.isBefore(cierre);
   }
 }
