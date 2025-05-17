@@ -1,4 +1,11 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { LibroEntity } from '../libro/libro.entity/libro.entity';
 
 @Entity()
 export class BibliotecaEntity {
@@ -14,4 +21,7 @@ export class BibliotecaEntity {
   horaApertura: string;
   @Column({ type: 'time' })
   horaCierre: string;
+  @ManyToMany(() => LibroEntity, (libro) => libro.bibliotecas)
+  @JoinTable()
+  libros: LibroEntity[];
 }

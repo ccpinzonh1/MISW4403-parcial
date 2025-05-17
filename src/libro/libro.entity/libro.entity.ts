@@ -1,4 +1,5 @@
-import { PrimaryGeneratedColumn, Column, Entity } from 'typeorm';
+import { PrimaryGeneratedColumn, Column, Entity, ManyToMany } from 'typeorm';
+import { BibliotecaEntity } from '../../biblioteca/biblioteca.entity';
 
 @Entity()
 export class LibroEntity {
@@ -12,4 +13,6 @@ export class LibroEntity {
   fechaPublicacion: Date;
   @Column()
   isbn: string;
+  @ManyToMany(() => BibliotecaEntity, (biblioteca) => biblioteca.libros)
+  bibliotecas: BibliotecaEntity[];
 }
