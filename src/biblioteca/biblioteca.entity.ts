@@ -5,7 +5,7 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { LibroEntity } from '../libro/libro.entity/libro.entity';
+import { LibroEntity } from '../libro/libro.entity';
 
 @Entity()
 export class BibliotecaEntity {
