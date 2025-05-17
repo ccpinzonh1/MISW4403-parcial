@@ -6,11 +6,13 @@ import { LibroModule } from './libro/libro.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BibliotecaEntity } from './biblioteca/biblioteca.entity';
 import { LibroEntity } from './libro/libro.entity/libro.entity';
+import { LibroBibliotecaModule } from './libro-biblioteca/libro-biblioteca.module';
 
 @Module({
   imports: [
     BibliotecaModule,
     LibroModule,
+    LibroBibliotecaModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
