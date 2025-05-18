@@ -9,7 +9,7 @@ import {
 } from '../shared/errors/business-errors';
 
 @Injectable()
-export class LibroBibliotecaService {
+export class BibliotecaLibroService {
   constructor(
     @InjectRepository(LibroEntity)
     private readonly libroRepository: Repository<LibroEntity>,

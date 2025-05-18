@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { LibroBibliotecaService } from './libro-biblioteca.service';
+import { BibliotecaLibroService } from './biblioteca-libro.service';
 import { TypeOrmTestingConfig } from '../shared/testing-utils/typeorm-testing-config';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { BibliotecaEntity } from '../biblioteca/biblioteca.entity';
@@ -7,8 +7,8 @@ import { LibroEntity } from '../libro/libro.entity';
 import { Repository } from 'typeorm';
 import { faker } from '@faker-js/faker';
 
-describe('LibroBibliotecaService', () => {
-  let service: LibroBibliotecaService;
+describe('BibliotecaLibroService', () => {
+  let service: BibliotecaLibroService;
   let libroRepository: Repository<LibroEntity>;
   let bibliotecaRepository: Repository<BibliotecaEntity>;
   let libroList: LibroEntity[];
@@ -17,10 +17,10 @@ describe('LibroBibliotecaService', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [...TypeOrmTestingConfig()],
-      providers: [LibroBibliotecaService],
+      providers: [BibliotecaLibroService],
     }).compile();
 
-    service = module.get<LibroBibliotecaService>(LibroBibliotecaService);
+    service = module.get<BibliotecaLibroService>(BibliotecaLibroService);
     libroRepository = module.get<Repository<LibroEntity>>(
       getRepositoryToken(LibroEntity),
     );
