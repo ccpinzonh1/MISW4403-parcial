@@ -12,7 +12,6 @@ import { LibroService } from './libro.service';
 import { LibroEntity } from './libro.entity';
 import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors/business-errors.interceptor';
 import { LibroDto } from './libro.dto';
-import { pl } from '@faker-js/faker/.';
 import { plainToInstance } from 'class-transformer';
 
 @UseInterceptors(BusinessErrorsInterceptor)

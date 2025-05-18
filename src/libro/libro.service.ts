@@ -33,7 +33,7 @@ export class LibroService {
   }
 
   async create(libro: LibroEntity): Promise<LibroEntity> {
-    if (libro.fechaPublicacion > new Date()) {
+    if (new Date(libro.fechaPublicacion) > new Date()) {
       throw new BusinessLogicException(
         'La fecha de publicación debe ser anterior o igual a la fecha actual.',
         BusinessError.PRECONDITION_FAILED,
@@ -44,7 +44,7 @@ export class LibroService {
 
   async update(id: string, libro: LibroEntity): Promise<LibroEntity> {
     const existingLibro = await this.findOne(id);
-    if (libro.fechaPublicacion > new Date()) {
+    if (new Date(libro.fechaPublicacion) > new Date()) {
       throw new BusinessLogicException(
         'La fecha de publicación debe ser anterior o igual a la fecha actual.',
         BusinessError.PRECONDITION_FAILED,
