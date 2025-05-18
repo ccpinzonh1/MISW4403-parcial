@@ -1,5 +1,5 @@
 import { PrimaryGeneratedColumn, Column, Entity, ManyToMany } from 'typeorm';
-import { BibliotecaEntity } from '../../biblioteca/biblioteca.entity';
+import { BibliotecaEntity } from '../biblioteca/biblioteca.entity';
 
 @Entity()
 export class LibroEntity {

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, In } from 'typeorm';
 import { BibliotecaEntity } from '../biblioteca/biblioteca.entity';
-import { LibroEntity } from '../libro/libro.entity/libro.entity';
+import { LibroEntity } from '../libro/libro.entity';
 import {
   BusinessLogicException,
   BusinessError,

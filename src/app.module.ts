@@ -5,7 +5,7 @@ import { BibliotecaModule } from './biblioteca/biblioteca.module';
 import { LibroModule } from './libro/libro.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BibliotecaEntity } from './biblioteca/biblioteca.entity';
-import { LibroEntity } from './libro/libro.entity/libro.entity';
+import { LibroEntity } from './libro/libro.entity';
 import { LibroBibliotecaModule } from './libro-biblioteca/libro-biblioteca.module';
 
 @Module({

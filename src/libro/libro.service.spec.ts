@@ -4,7 +4,7 @@ import { TypeOrmTestingConfig } from '../shared/testing-utils/typeorm-testing-co
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { faker } from '@faker-js/faker';
-import { LibroEntity } from './libro.entity/libro.entity';
+import { LibroEntity } from './libro.entity';
 
 describe('LibroService', () => {
   let service: LibroService;

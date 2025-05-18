@@ -3,7 +3,7 @@ import { LibroBibliotecaService } from './libro-biblioteca.service';
 import { TypeOrmTestingConfig } from '../shared/testing-utils/typeorm-testing-config';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { BibliotecaEntity } from '../biblioteca/biblioteca.entity';
-import { LibroEntity } from '../libro/libro.entity/libro.entity';
+import { LibroEntity } from '../libro/libro.entity';
 import { Repository } from 'typeorm';
 import { faker } from '@faker-js/faker';
 
